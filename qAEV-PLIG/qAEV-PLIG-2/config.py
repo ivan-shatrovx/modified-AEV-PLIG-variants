@@ -1,5 +1,5 @@
 """
-config.py — Centralised configuration for AEV-PLIG-Coulomb.
+config.py — Centralised configuration for qAEV-PLIG.
 
 All tuneable physics parameters and paths live here so they are
 easy to find and change in one place.

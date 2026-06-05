@@ -1,5 +1,5 @@
 """
-generate_graphs.py — Unified graph generation for AEV-PLIG-Coulomb.
+generate_graphs.py — Unified graph generation for qAEV-PLIG-1.
 
 Reads dataset.csv, generates per-complex graphs with:
   - Original node features (one-hot element + chemical features + AEV)
@@ -200,7 +200,7 @@ def mol_to_graph(mol, mol_df, aevs, heavy_atom_charges, coulomb_potentials, coul
 if __name__ == "__main__":
     import argparse
 
-    parser = argparse.ArgumentParser(description="Generate graphs for AEV-PLIG-Coulomb")
+    parser = argparse.ArgumentParser(description="Generate graphs for qAEV-PLIG-1")
     parser.add_argument("--csv", type=str, default=DATASET_CSV,
                         help="Path to dataset CSV")
     parser.add_argument("--output", type=str, default="data/graphs.pickle",
