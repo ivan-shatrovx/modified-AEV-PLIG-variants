@@ -27,7 +27,7 @@ This repository contains four modified variants of [AEV-PLIG](https://github.com
 | qAEV-PLIG-1 | `qAEV-PLIG/qAEV-PLIG-1/` | Electrostatics via fixed dielectric Coulomb potential | [MODEL.md](qAEV-PLIG/qAEV-PLIG-1/MODEL.md) |
 | qAEV-PLIG-2 | `qAEV-PLIG/qAEV-PLIG-2/` | Electrostatics via distance-dependent dielectric + multi-task training | [MODEL.md](qAEV-PLIG/qAEV-PLIG-2/MODEL.md) |
 | Global-10 | `AEV-PLIG-global/` | 10 global pocket/ligand features injected into MLP | [MODEL_GLOBAL10.md](AEV-PLIG-global/MODEL_GLOBAL10.md) |
-| Global-6 | `AEV-PLIG-global/` | 6 fpocket pocket descriptors injected into MLP | [MODEL_GLOBAL6.md](AEV-PLIG-global/MODEL_GLOBAL6.md) |
+| DPK-6 | `AEV-PLIG-global/` | 6 Dpocket-derived pocket descriptors injected into MLP | [MODEL_DPK6.md](AEV-PLIG-global/MODEL_DPK6.md) |
 
 ---
 
@@ -55,7 +55,7 @@ AM1-BCC ligand charges (via antechamber/sqm) and ff14SB protein charges (via Ope
 - `submit_charges.sh` — SLURM array job to run at scale
 - `compute_benchmark_charges.py` / `submit_benchmark_charges.sh` — same for benchmark sets
 
-### Global features (Global-10, Global-6)
+### Global features (Global-10, DPK-6)
 
 Features are computed from PDBBind + BindingNet + BindingDB structures. Scripts in [`data_preparation/global_features/`](data_preparation/global_features/):
 
@@ -76,4 +76,4 @@ generate_split_csvs.py    →  generate_graphs.py    →  create_pytorch_data.py
 
 See the individual MODEL.md files for model-specific instructions and differences from the baseline.
 
-This file was written using Claude Sonnet 4.6. 
+Claude Sonnet 4.6 was used to help write and format this file. 
