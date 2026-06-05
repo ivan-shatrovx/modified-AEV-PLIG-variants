@@ -1,10 +1,10 @@
-# Global-6
+# DPK-6
 
-A variant of Global-10 that uses only **6 fpocket pocket descriptors** as global features, removing the Arpeggio and RDKit features.
+A variant of AEV-PLIG that uses **6 Dpocket-derived pocket descriptors** as global features. 
 
 ---
 
-## Modifications vs Baseline AEV-PLIG
+## Modifications vs AEV-PLIG
 
 ### 1. Global feature vector (6 dimensions per complex)
 
@@ -34,11 +34,7 @@ self.global_mlp = nn.Sequential(
 self.fc1 = nn.Linear(final_dim * 2 + 6, 1024)
 ```
 
-### 3. Motivation vs Global-10
-
-Global-6 uses only pocket-level features (from fpocket), making it applicable to any structure where a binding pocket can be identified — without requiring Arpeggio (protein–ligand complex needed) or RDKit ligand descriptors. This makes it more suitable for prospective virtual screening where the bound pose may not be known with high confidence.
-
-### 4. Node features
+### 3. Node features
 
 Unchanged from the baseline AEV-PLIG (367 dimensions).
 
@@ -59,4 +55,6 @@ Global-6 shares all graph generation and utility code with Global-10. The only m
 
 ## Training data
 
-Same as Global-10: PDBBind 2020 + BindingNet + BindingDB. Pocket features are computed using `data_preparation/global_features/run_dpocket_pipeline.py`.
+Same as Global-10: PDBBind 2020. Pocket features are computed using `data_preparation/global_features/run_dpocket_pipeline.py`.
+
+This file was written using Claude Sonnet 4.6.
