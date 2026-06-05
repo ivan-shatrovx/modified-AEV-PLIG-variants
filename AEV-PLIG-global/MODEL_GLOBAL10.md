@@ -68,4 +68,4 @@ Node features are **unchanged** from the baseline AEV-PLIG (367 dimensions). No 
 
 PDBBind 2020 (refined set + general set). Graphs are generated using the original AEV-PLIG mol2/PDB pipeline. Global features are computed from the same structures using the scripts in `data_preparation/global_features/`.
 
-This file was written using Claude Sonnet 4.6.
+Claude Sonnet 4.6 was used to help write and format this file. 
