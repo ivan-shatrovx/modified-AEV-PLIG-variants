@@ -57,4 +57,4 @@ Global-6 shares all graph generation and utility code with Global-10. The only m
 
 Same as Global-10: PDBBind 2020. Pocket features are computed using `data_preparation/global_features/run_dpocket_pipeline.py`.
 
-This file was written using Claude Sonnet 4.6.
+Claude Sonnet 4.6 was used to help write and format this file. 
