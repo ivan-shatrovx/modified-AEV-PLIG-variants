@@ -1,10 +1,10 @@
 # qAEV-PLIG-1
 
-Extends the baseline AEV-PLIG by incorporating electrostatic information using a **fixed dielectric Coulomb model**.
+Extends AEV-PLIG by incorporating electrostatic information using a **fixed dielectric Coulomb model**.
 
 ---
 
-## Modifications vs Baseline AEV-PLIG
+## Modifications vs AEV-PLIG
 
 ### 1. New node features (×2 per ligand heavy atom)
 
@@ -72,3 +72,5 @@ Charges are pre-computed per complex (see `data_preparation/charges/`) and store
 ## Training data
 
 HiQBind — energy-minimised structures derived from PDBBind 2020 (small molecules and polymeric ligands). See `data_preparation/hiqbind/` for the curation pipeline.
+
+This file was written using Claude Sonnet 4.6. 
