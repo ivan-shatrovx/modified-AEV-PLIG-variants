@@ -1,8 +1,6 @@
 # qAEV-PLIG-1
 
-This file was written using AI. 
-
-Extends AEV-PLIG by incorporating electrostatic information using a **fixed dielectric Coulomb model**.
+Extends the baseline AEV-PLIG by incorporating electrostatic information using a **fixed dielectric Coulomb model**.
 
 ---
 

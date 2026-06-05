@@ -66,7 +66,7 @@ pk, ec = model(data)    # shapes [B, 1], [B, 1]
 L = w_pk · MSE(pk_pred, pk_true) + w_ec · MSE(ec_pred, ec_true_normalised)
 ```
 
-Default weights: `w_pk = 1.0`, `w_ec = 1.0` (configurable in `config_ddd.py`). The Coulomb energy targets are normalised to zero mean and unit variance before training; normalisation statistics are saved to `processed_ddd/coulomb_norm_stats.json`.
+Default weights: `w_pk = 1.0`, `w_ec = 1.0` (configurable in `config_qaev_plig_2.py`). The Coulomb energy targets are normalised to zero mean and unit variance before training; normalisation statistics are saved to `processed_ddd/coulomb_norm_stats.json`.
 
 ### 5. Dropout
 
@@ -78,8 +78,8 @@ The pK MLP head includes dropout (p = 0.2) after the first batch-norm layer, whi
 
 | File | Role |
 |------|------|
-| `config_ddd.py` | DDD physics parameters and loss weights |
-| `helpers_ddd.py` | `epsilon_ddd()`, `compute_coulomb_potential_ddd()`, `compute_coulomb_energy_ddd()` |
+| `config_qaev_plig_2.py` | DDD physics parameters and loss weights |
+| `helpers_qaev_plig_2.py` | `epsilon_ddd()`, `compute_coulomb_potential_ddd()`, `compute_coulomb_energy_ddd()` |
 | `model_defs.py` | `GATv2Net_DDD` with dual heads |
 | `training.py` | Multi-task training loop |
 
