@@ -1,5 +1,7 @@
 # Modified AEV-PLIG Variants
 
+This file was written using AI. 
+
 This repository contains four modified variants of [AEV-PLIG](https://github.com/oxpig/AEV-PLIG), a GATv2-based graph neural network for protein–ligand binding affinity prediction. Each variant extends the baseline model in a different direction. The baseline model and its original training code are not included here.
 
 ---
