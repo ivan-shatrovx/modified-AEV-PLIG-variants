@@ -73,4 +73,4 @@ Charges are pre-computed per complex (see `data_preparation/charges/`) and store
 
 HiQBind — energy-minimised structures derived from PDBBind 2020 (small molecules and polymeric ligands). See `data_preparation/hiqbind/` for the curation pipeline.
 
-This file was written using Claude Sonnet 4.6. 
+Claude Sonnet 4.6 was used to help write and format this file. 
