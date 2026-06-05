@@ -1,6 +1,6 @@
 # qAEV-PLIG-2
 
-Extends the baseline AEV-PLIG with electrostatics using a **distance-dependent dielectric (DDD)** model and **multi-task training** on both pK and Coulomb energy.
+Extends AEV-PLIG with electrostatics using a **distance-dependent dielectric (DDD)** model and **multi-task training** on both pK and Coulomb energy.
 
 ---
 
@@ -53,7 +53,7 @@ pK head          Coulomb energy head
   pK pred          E_coulomb pred
 ```
 
-The **Coulomb energy is not injected** as an extra input to the MLP (unlike qAEV-PLIG-1). The model is instead trained to predict Coulomb energy as an auxiliary task, forcing the GNN to encode electrostatic structure in the learned representations.
+The **Coulomb energy is not injected** as an extra input to the MLP (unlike qAEV-PLIG-1). The model is instead trained to predict Coulomb energy as a second task, forcing the GNN to encode electrostatic structure in the learned representations.
 
 ```python
 # forward() returns a tuple
@@ -90,3 +90,5 @@ The pK MLP head includes dropout (p = 0.2) after the first batch-norm layer, whi
 ## Training data
 
 Same as qAEV-PLIG-1: HiQBind (energy-minimised PDBBind 2020). Graphs are stored in a separate pickle (`graphs_ddd.pickle`) and PyTorch files in `data/processed_ddd/` to avoid collision with qAEV-PLIG-1 artefacts.
+
+Claude Sonnet 4.6 was used to help create and format this file. 
