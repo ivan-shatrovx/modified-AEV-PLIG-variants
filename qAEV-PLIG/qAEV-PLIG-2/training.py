@@ -26,7 +26,7 @@ import pickle
 from helpers import rmse, pearson
 from utils import GraphDataset_DDD, init_weights
 from model_defs import GATv2Net_DDD
-from config_ddd import LOSS_WEIGHT_PK, LOSS_WEIGHT_COULOMB
+from config_qaev_plig_2 import LOSS_WEIGHT_PK, LOSS_WEIGHT_COULOMB
 from config import DATASET_CSV
 
 

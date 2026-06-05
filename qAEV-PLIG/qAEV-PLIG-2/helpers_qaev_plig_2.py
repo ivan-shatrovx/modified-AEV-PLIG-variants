@@ -1,5 +1,5 @@
 """
-helpers_ddd.py — Coulomb utilities for AEV-PLIG-Coulomb-DDD.
+helpers_qaev_plig_2.py — Coulomb utilities for AEV-PLIG-Coulomb-DDD.
 
 Uses the Mehler–Solmajer distance-dependent dielectric (DDD) instead of a
 constant permittivity.  Charge-loading helpers are re-imported directly from
@@ -8,7 +8,7 @@ helpers.py — no copy needed.
 
 import numpy as np
 
-from config_ddd import COULOMB_K, DDD_A, DDD_B, DDD_LAMBDA, DDD_K, COULOMB_CUTOFF
+from config_qaev_plig_2 import COULOMB_K, DDD_A, DDD_B, DDD_LAMBDA, DDD_K, COULOMB_CUTOFF
 from config import DISTANCE_EPSILON
 
 # Re-export shared helpers so callers can import everything from one place.

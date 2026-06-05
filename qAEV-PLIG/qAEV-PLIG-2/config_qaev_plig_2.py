@@ -1,5 +1,5 @@
 """
-config_ddd.py — Configuration for AEV-PLIG-Coulomb-DDD.
+config_qaev_plig_2.py — Configuration for qAEV-PLIG-2.
 
 Uses a distance-dependent dielectric (Mehler–Solmajer 1991 / AutoDock4)
 instead of a constant permittivity, and multi-task output heads.

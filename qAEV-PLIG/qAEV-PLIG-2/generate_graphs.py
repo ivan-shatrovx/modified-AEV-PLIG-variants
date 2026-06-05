@@ -2,7 +2,7 @@
 generate_graphs.py — Graph generation for AEV-PLIG-Coulomb-DDD.
 
 Identical to generate_graphs.py except:
-  - Uses distance-dependent dielectric (DDD) Coulomb functions from helpers_ddd.py
+  - Uses distance-dependent dielectric (DDD) Coulomb functions from helpers_qaev_plig_2.py
   - Larger Coulomb cutoff (12 Å vs 5.1 Å)
   - Writes output to a separate pickle (default: data/graphs_ddd.pickle)
 
@@ -28,8 +28,8 @@ from config import (
     ATOM_KEYS_CSV, DATASET_CSV,
     ELEMENT_LIST,
 )
-from config_ddd import COULOMB_CUTOFF
-from helpers_ddd import (
+from config_qaev_plig_2 import COULOMB_CUTOFF
+from helpers_qaev_plig_2 import (
     load_charges, get_heavy_atom_charges,
     get_protein_coords_and_charges,
     compute_coulomb_potential_ddd, compute_coulomb_energy_ddd,

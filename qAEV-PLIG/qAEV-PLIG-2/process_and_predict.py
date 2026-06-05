@@ -35,12 +35,12 @@ warnings.filterwarnings("ignore", message="Dependency not satisfied, torchani.da
 from utils import GraphDatasetPredict_DDD
 from torch_geometric.loader import DataLoader
 from model_defs import GATv2Net_DDD
-from helpers_ddd import (
+from helpers_qaev_plig_2 import (
     load_charges, get_heavy_atom_charges,
     get_protein_coords_and_charges,
     compute_coulomb_potential_ddd, compute_coulomb_energy_ddd,
 )
-from config_ddd import COULOMB_CUTOFF
+from config_qaev_plig_2 import COULOMB_CUTOFF
 from config import ELEMENT_LIST, ATOM_KEYS_CSV, AEV_RCR, AEV_ETAR, AEV_RSR, AEV_NUM_SPECIES
 
 
