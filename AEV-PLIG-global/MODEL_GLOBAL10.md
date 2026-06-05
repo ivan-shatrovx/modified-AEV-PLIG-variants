@@ -1,10 +1,10 @@
 # Global-10
 
-Extends the baseline AEV-PLIG by injecting **10 global pocket and ligand features** into the MLP head alongside the pooled GNN representation.
+Extends AEV-PLIG by injecting **10 global pocket and ligand features** into the MLP head alongside the pooled GNN representation.
 
 ---
 
-## Modifications vs Baseline AEV-PLIG
+## Modifications vs AEV-PLIG
 
 ### 1. Global feature vector (10 dimensions per complex)
 
@@ -21,7 +21,7 @@ Ten scalar descriptors are computed externally (prior to training) and stored in
 | `rdk_TPSA` | RDKit | Topological polar surface area |
 | `dpk_volume_score` | fpocket | Pocket volume score |
 | `dpk_prop_polar_atm` | fpocket | Proportion of polar pocket atoms |
-| `dpk_mean_loc_hyd_dens` | fpocket | Mean local hydrophobicity density |
+| `dpk_mean_loc_hyd_dens` | fpocket | Mean local hydrophobic density |
 
 Feature selection was performed using SHAP analysis on a metamodel trained on AEV-PLIG predictions and these descriptors.
 
@@ -42,7 +42,7 @@ self.global_mlp = nn.Sequential(
 The pooling step changes from:
 
 ```python
-# Baseline
+# AEV-PLIG
 x = torch.cat([gmp(x, batch), gap(x, batch)], dim=1)          # [B, 2·D]
 self.fc1 = nn.Linear(final_dim * 2, 1024)
 ```
@@ -56,14 +56,16 @@ x = torch.cat([gmp(x, batch), gap(x, batch), global_proj], dim=1)   # [B, 2·D +
 self.fc1 = nn.Linear(final_dim * 2 + 10, 1024)
 ```
 
-All other architecture details are unchanged from the baseline.
+All other architecture details are unchanged.
 
 ### 4. Node features
 
-Node features are **unchanged** from the baseline AEV-PLIG (367 dimensions). No per-atom electrostatic features are added.
+Node features are **unchanged** from the baseline AEV-PLIG (367 dimensions). No per-atom features are added.
 
 ---
 
 ## Training data
 
-PDBBind 2020 (refined set + general set) combined with BindingNet and BindingDB. Graphs are generated using the original AEV-PLIG mol2/PDB pipeline. Global features are computed from the same structures using the scripts in `data_preparation/global_features/`.
+PDBBind 2020 (refined set + general set). Graphs are generated using the original AEV-PLIG mol2/PDB pipeline. Global features are computed from the same structures using the scripts in `data_preparation/global_features/`.
+
+This file was written using Claude Sonnet 4.6.
