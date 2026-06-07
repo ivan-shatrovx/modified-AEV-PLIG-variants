@@ -10,7 +10,7 @@ This repository contains four modified variants of [AEV-PLIG](https://github.com
 ├── qAEV-PLIG/
 │   ├── qAEV-PLIG-1/        Electrostatic model — fixed dielectric
 │   └── qAEV-PLIG-2/        Electrostatic model — distance-dependent dielectric
-├── AEV-PLIG-global/        Global pocket/ligand feature models (Global-10 and Global-6)
+├── AEV-PLIG-global/        Global pocket/ligand feature models (Global-10 and Dpocket-6)
 └── data_preparation/
     ├── generate_dataset_csv.py     Walk HiQBind dataset → dataset.csv
     ├── hiqbind/                    PDBBind structure curation pipeline (HiQBind)
